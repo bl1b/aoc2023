@@ -10,12 +10,9 @@ import kotlin.io.path.readLines
  */
 fun readInput(name: String) = Path("src/$name.txt").readLines()
 
-fun readInputResources(name: String): List<String> {
-    val resourceAsStream = object {}.javaClass.getResourceAsStream("$name.txt")
-    val bufferedReader = resourceAsStream!!.bufferedReader()
-    return bufferedReader.readLines()
+fun verifyTestResult(testResult: Any, expected: Any) {
+    check(testResult == expected, { "Nope, try again. '${testResult}' not matching expected '${expected}'." })
 }
-
 
 /**
  * Converts string to md5 hash.
