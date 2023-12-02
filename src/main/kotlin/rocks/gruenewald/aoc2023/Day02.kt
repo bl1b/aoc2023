@@ -65,7 +65,9 @@ fun main() {
         Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green
     """.trimIndent().split("\n")
     verifyTestResult(part1(part1TestInput), 8)
-    part1(readInput("day2")).println()
+
+    val inputForTheDay = readInput("day02")
+    part1(inputForTheDay).println()
 
     val part2TestInput = """
         Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green
@@ -75,6 +77,6 @@ fun main() {
         Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green
     """.trimIndent().split("\n")
     verifyTestResult(part2(part2TestInput), 2286L)
-    part2(readInput("day2")).println()
+    part2(inputForTheDay).println()
 }
 

@@ -37,7 +37,9 @@ fun main() {
         treb7uchet
     """.trimIndent().split("\n")
     verifyTestResult(part1(testPart1), 142)
-    part1(readInput("day1")).println()
+
+    val inputForTheDay = readInput("day01")
+    part1(inputForTheDay).println()
 
     val testPart2 = """
         two1nine
@@ -49,7 +51,7 @@ fun main() {
         7pqrstsixteen
     """.trimIndent().split("\n")
     verifyTestResult(part2(testPart2), 281)
-    part2(readInput("day1")).println()
+    part2(inputForTheDay).println()
 }
 
 private fun numberFromString(str: String): String =
