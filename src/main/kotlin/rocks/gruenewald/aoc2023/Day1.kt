@@ -2,6 +2,7 @@ package rocks.gruenewald.aoc2023
 
 import rocks.gruenewald.println
 import rocks.gruenewald.readInput
+import rocks.gruenewald.verifyTestResult
 
 fun main() {
     fun part1(lines: List<String>): Number {
@@ -35,7 +36,7 @@ fun main() {
         a1b2c3d4e5f
         treb7uchet
     """.trimIndent().split("\n")
-    assert(part1(testPart1) == 142)
+    verifyTestResult(part1(testPart1), 142)
     part1(readInput("day1")).println()
 
     val testPart2 = """
@@ -47,7 +48,7 @@ fun main() {
         zoneight234
         7pqrstsixteen
     """.trimIndent().split("\n")
-    assert(part2(testPart2) == 281)
+    verifyTestResult(part2(testPart2), 281)
     part2(readInput("day1")).println()
 }
 
